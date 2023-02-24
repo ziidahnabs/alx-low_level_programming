@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - print the last digit of variable n
+ * main - prints the last digit of a randomly generate number
+ * and whether it is great than 5, less than 6, or 0
  * Retun: 0
  */
 int main(void)
@@ -13,8 +14,9 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
 	x = n % 10;
-	printf("Last digit of %d is %d", n, x);
+	printf("Last digit of %d is %d ", n, x);
 	if (x > 5)
 	{
 		printf("and is greater than 5");
@@ -27,6 +29,8 @@ int main(void)
 	{
 		printf("and is less than 6 and not 0");
 	}
+
 	printf("\n");
+
 	return (0);
 }
